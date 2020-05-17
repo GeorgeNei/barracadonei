@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('../img/fundo.img');
+  background-size: auto 100vh;
+  height: 100vh;
+  font-size: 10;
+}
+
+@media (min-width: 400px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 800px) {
+  body {
+    font-size: 22px;
+  }
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu a {
+  color: teal;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  transition: background-color 1s, color 1s;
+  border-radius: 10px;
+}
+
+.menu a:active {
+  background-color: black;
+  color: red;
+  transition: text-shadow 0s;
+}
+
+
+.menu a:hover {
+  background-color: black;
+  color: gold;
+}
+
+.site-title {
+  color: #000000;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 4em;
+  transition: color 1s;
+}
+ 
+.site-title:active,
+.site-title:hover {
+  color: green;
+}
+
+
+.site-subtitle {
+  color: #000000;
+  font-style: italic;
+  font-weight: lighter;
+  text-align: center;
+  font-size: 2em;
+  font-family: 'Courgette', cursive;
+}
+
+.titulo {
+  opacity: 0;
+  animation: linear 2s animacaotitulo forwards;
+}
+
+@keyframes animacaotitulo {
+100% {
+  opacity: 1;
+}
+}
+
+.img-serviços {
+  height: 180px;
+  width: 300px;
+  margin: 10px;
+  border-radius: 10px;
+  transition: transform 500ms;
+}
+
+.img-serviços:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.legendas {
+  font-size: 40px;
+  font-family: 'Pacifico', cursive;
+}
+
+.serviços h2 {
+  margin: 20px;
+  font-size: 2em;
+}
+
+.serviços {
+  min-height: 50vw;
+}
+
+a:hover {
+  text-decoration: overline;
+}
+
+.serviços figure {
+  text-align: center;
+}
+
+.serviços .grid {
+  display: grid;
+}
+
+@media (min-width: 900px) {
+  .serviços .grid {
+  grid-template-columns: 300px 600px;
+  justify-content: center;
+  }
+}
+
+.contato h2 {
+  margin: 40px 20px 60px 20px;
+  font-size: 2em;
+}
+
+.contato {
+  height: 50vw;
+}
+
+.contato a {
+  color: blueviolet;
+  font-size: 5em;
+  margin: 15px;
+  transition: text-shadow 1s;
+}
+
+.contato a:hover {
+  text-decoration: none;
+  text-shadow: 0px 0px 50px gold;
+}
+
+.contato a:active {
+  text-shadow: 10px 10px black;
+  transition: text-shadow 0s;
+}
+
+.contato .icons {
+  text-align: center;
+}
